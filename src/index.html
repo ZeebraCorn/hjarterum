@@ -7,6 +7,7 @@
     <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./output.css">
     <script src="./menu.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +16,29 @@
 <body>
     <div>
         <!-- Header -->
-        <header class="h-20 w-full fixed flex z-50 bg-whiteish px-8 2xl:px-64">
-            <div class="w-full flex items-center justify-between">
+        <header class="h-20 w-full fixed flex items-center z-50 bg-whiteish px-8 2xl:px-64">
+            <div class="w-full flex items-end lg:items-center justify-between">
                 <!-- Logo -->
                 <a href="">
                     <img class="w-[195px]" src="assets/icons/logo.svg" alt="Hjärterum logo">
                 </a>
 
-                <!-- Responsive Menu Button -->
-                <button class="menu-button lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>  
-                </button>
+                <!-- Responsive Menu Buttons -->
+                <div x-data="{ open: false }">
+                       <!-- Menu button -->
+                    <button @click="open = true" x-show="!open" class="menu-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>  
+                    </button>
+
+                     <!-- Close Button -->
+                    <button @click="open = false" x-show="open" class="close-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>                  
+                    </button>
+                </div>
 
                 <!-- Menu -->
                 <nav class="lg:flex cursor-pointer hidden">
@@ -44,17 +55,10 @@
         </header>
 
         <!-- Responsive Menu -->
-        <nav class="responsive-menu h-screen w-full fixed z-50 bg-whiteish hidden grid-rows-[1fr]">
-
-            <!-- Close Button -->
-            <button class="close-button absolute right-8 top-8">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                  
-            </button>
+        <nav class="responsive-menu w-full fixed z-50 bg-whiteish hidden grid-rows-[1fr] translate-y-20">
 
             <!-- Menu -->
-            <nav  class="text-dark-beige text-2xl text-center flex justify-center mt-28">
+            <nav  class="text-dark-beige text-2xl text-center flex justify-center my-8">
                 <ul class="flex flex-col gap-4">
                     <li class="font-bold text-dark-pink"><a href="">Startsida</a></li>
                     <li><a href="">Bostäder</a></li>
@@ -68,7 +72,7 @@
 
             <!-- Socials -->
             <nav>
-                <ul class="text-dark-pink text-2xl flex gap-4 justify-center mb-8">
+                <ul class="text-dark-pink text-2xl flex gap-4 justify-center mb-14">
                     <li><a href="">facebook</a></li>
                     <li><a href="">instagram</a></li>
                 </ul>
@@ -76,37 +80,37 @@
         </nav>
 
         <!-- Hero -->
-        <section class="pt-20 h-screen lg:max-w[1216px] 2xl:max-w-[1440px] mx-auto">
+        <section class="pt-20 mb-32 lg:mb-0 lg:h-screen lg:max-w[1216px] 2xl:max-w-[1440px] mx-auto">
             <div class="flex justify-between items-center">
                 <div>
                     <!-- Hero Background Icon -->
                     <figure class="flex items-center">
-                        <img class="sm:pl-2 lg:pl-4 h-[300px] sm:h-[250px] md:h-[300px] lg:h-[440px] xl:h-[540px] mt-80 sm:mt-48 md:mt-52 lg:mt-52 xl:mt-44 opacity-20 absolute" src="assets/icons/background-logo.svg" alt="Hjärterum icon">
+                        <img class="ml-4 lg:ml-4 h-[250px] md:h-[300px] lg:h-[440px] xl:h-[540px] mt-72 sm:mt-64 opacity-20 absolute" src="assets/icons/background-logo.svg" alt="Hjärterum icon">
                     </figure>
                     <!-- Hero Content -->
-                    <div class="sm:pl-4 lg:pl-8">
-                        <h1 class="text-dark-pink text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl sm:max-w-[250px] md:max-w-[340px] xl:max-w-[490px]">Välkommen till <span class="text-dark-beige">Hjärterum</span>!</h1>
+                    <div class="mt-16 ml-8 lg:ml-4 sm:pl-4">
+                        <h1 class="text-dark-pink text-4xl md:text-5xl lg:text-6xl xl:text-7xl sm:max-w-[250px] md:max-w-[340px] lg:max-w-[440px] xl:max-w-[490px]">Välkommen till <span class="text-dark-beige">Hjärterum</span>!</h1>
                         <p class="text-xl lg:text-2xl pt-2 pb-4 md:pt-4 md:pb-6 text-dark-beige">Hitta ditt nya hem hos oss</p>
                         <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-44 z-10 hover:bg-transparent hover:text-dark-beige" href="">Lediga bostäder</a>
                     </div>
                 </div>
                 <!-- Hero Image -->
                 <figure>
-                    <img class="hidden sm:block sm:w-[300px] md:w-[380px] lg:w-[630px] xl:w-[730px] 2xl:w-[890px]" src="assets/images/hero-copy.jpg" alt="Mother holding a child against her hip with cherrytree branches in the foreground">
+                    <img class="hidden sm:block sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[730px] 2xl:w-[890px]" src="assets/images/hero-copy.jpg" alt="Mother holding a child against her hip with cherrytree branches in the foreground">
                 </figure>
             </div>
         </section>
 
         <!-- Housing -->
-        <section class="bg-whiteish-opacity-50 mt-32 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1370px] mx-auto px-0">
+        <section class="bg-whiteish-opacity-50 mt-0 xl:mt-32 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto px-0">
             <div class="py-8 lg:py-14 px-4 lg:px-16 xl:px-28">
                 <!-- Housing Header -->
-                <header class="flex sm:justify-between sm:items-end flex-col gap-4 items-start">
+                <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Ledigt just nu</h2>
                     <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-52 z-10 hover:bg-transparent hover:text-dark-beige" href="">Alla lediga bostäder</a>
                 </header>
                 <!-- Housing Cards -->
-                <div class="mt-8 flex justify-between flex-wrap lg:gap-x-0 xl:gap-x-16 gap-y-10 pb-16">
+                <div class="mt-8 flex flex-col items-center md:justify-between md:flex-row flex-wrap lg:gap-x-1 gap-y-10 pb-16">
                     <!-- Card 1 -->
                     <div>
                         <figure class="bg-[url('/src/assets/images/13.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
@@ -328,20 +332,20 @@
         </section>
 
         <!-- Section Line -->
-        <div class="border-2 border-dark-pink max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1370px] my-16 mx-auto"></div>
+        <div class="border-2 border-dark-pink max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] my-16 mx-auto"></div>
 
         <!-- News -->
-        <section class="bg-whiteish-opacity-50 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1370px] mx-auto px-0">
+        <section class="bg-whiteish-opacity-50 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto px-0">
             <div class="py-8 lg:py-14 px-4 lg:px-16 xl:px-28">
                 <!-- News Header -->
-                <header class="flex sm:justify-between sm:items-end flex-col gap-4 items-start">
+                <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Nyheter</h2>
-                    <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-48 z-10 hover:bg-transparent hover:text-dark-beige" href="">Alla nyheter</a>
+                    <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-36 z-10 hover:bg-transparent hover:text-dark-beige" href="">Alla nyheter</a>
                 </header>
                 <!-- News Cards -->
                 <div class="flex flex-wrap justify-between gap-x-0 xl:gap-x-10 gap-y-14 mt-8">
                     <!-- Card 1 -->
-                    <div class="flex flex-col sm:gap-10">
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
                         <figure class="bg-[url('/src/assets/images/news-1.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">23 Februari, 2024</p>
@@ -354,7 +358,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="flex flex-col sm:gap-10">
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
                         <figure class="bg-[url('/src/assets/images/key.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">15 Mars, 2024</p>
@@ -367,7 +371,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="flex flex-col sm:gap-10">
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
                         <figure class="bg-[url('/src/assets/images/solar-panels.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">24 Mars, 2024</p>
@@ -380,7 +384,7 @@
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="flex flex-col sm:gap-10">
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
                         <figure class="bg-[url('/src/assets/images/electric-car.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">7 April, 2024</p>
@@ -397,20 +401,20 @@
         </section>
 
         <!-- Section Line -->
-        <div class="border-2 border-dark-pink max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1370px] my-16 mx-auto"></div>
+        <div class="border-2 border-dark-pink max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] my-16 mx-auto"></div>
 
         <!-- Footer -->
-        <footer class="bg-lighter-beige sm:px-4 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1370px] mx-auto mb-14">
+        <footer class="bg-lighter-beige sm:px-4 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto mb-14">
             <div class="py-8 md:py-14 md:px-[100px] lg:px-[200px] xl:px-[350px]">
                 <div class="max-w-[670px] flex flex-col">
                     <!-- Footer Logo -->
                     <div>
                       <a href="">
-                        <img class="w-[195px]" src="assets/icons/logo.svg" alt="Hjärterum logo">
+                        <img class="w-[195px] pl-16 sm:pl-0" src="assets/icons/logo.svg" alt="Hjärterum logo">
                       </a>
                     </div>
-                    <!-- Footer Adress -->
-                    <div class="flex justify-between mt-3">
+                    <div class="hidden sm:flex justify-between mt-3">
+                        <!-- Footer Adress -->
                         <div>
                             <p class="text-white">Amors väg 32</p>
                             <p class="text-white">123 45 Stockholm</p>
@@ -432,17 +436,58 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="flex justify-between items-end mt-4">
+                    <div class="hidden sm:flex justify-between items-end mt-4">
+                        <!-- Opening Hours -->
                         <div>
                             <p class="text-dark-pink">Öppettider:</p>
                             <p class="text-white">Måndag-fredag 08:00-16:30</p>
                         </div>
+                        <!-- Cookies & Integritypolicy -->
                         <div>
                             <ul class="text-sm text-white flex gap-12">
                                 <li><a href="">Cookies</a></li>
                                 <li><a href="">Integritetspolicy</a></li>
                             </ul>
                         </div>
+                    </div>
+
+                    <!-- Footer Responsive -->
+                    <div class="flex flex-col gap-4 pl-16 mt-4 mb-10 sm:hidden">
+                        <!-- Adress -->
+                        <div>
+                            <p class="text-white">Amors väg 32</p>
+                            <p class="text-white">123 45 Stockholm</p>
+                            <p class="text-white">info@hjarterum.se</p>
+                            <p class="text-white">08 - 12 34 5
+                        </div>
+                        <!-- Opening Hours -->
+                        <div>
+                            <p class="text-dark-pink">Öppettider:</p>
+                            <p class="text-white">Måndag-fredag 08:00-16:30</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-16 pl-16 mb-8 sm:hidden">
+                        <!-- Footer Menu -->
+                        <div>
+                            <ul class="text-white flex flex-col gap-3">
+                                <li><a href="">Felanmälan</a></li>
+                                <li><a href="">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Socials -->
+                        <div>
+                            <ul class="text-dark-pink flex flex-col gap-3">
+                                <li><a href="">facebook</a></li>
+                                <li><a href="">instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Cookies & Integritypolicy -->
+                     <div>
+                        <ul class="text-sm text-white flex gap-20 pl-16 sm:hidden">
+                            <li><a href="">Cookies</a></li>
+                            <li><a href="">Integritetspolicy</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
