@@ -6,7 +6,6 @@
     <title>Hjärterum</title>
     <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./output.css">
-    <script src="./menu.js" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <div x-data="{ open: false }">
         <!-- Header -->
         <header class="h-20 w-full fixed flex items-center z-50 bg-whiteish px-8 2xl:px-64">
             <div class="w-full flex items-end lg:items-center justify-between">
@@ -24,7 +23,7 @@
                 </a>
 
                 <!-- Responsive Menu Buttons -->
-                <div x-data="{ open: false }">
+                <div>
                        <!-- Menu button -->
                     <button @click="open = true" x-show="!open" class="menu-button lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
@@ -55,10 +54,10 @@
         </header>
 
         <!-- Responsive Menu -->
-        <nav class="responsive-menu w-full fixed z-50 bg-whiteish hidden grid-rows-[1fr] translate-y-20">
+        <nav class="responsive-menu w-full fixed z-40">
 
             <!-- Menu -->
-            <nav  class="text-dark-beige text-2xl text-center flex justify-center my-8">
+            <nav x-bind:class="! open ? '-translate-y-full'  : 'translate-y-0'"  class="bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 min-h-28 top-20 transition-all duration-500 pb-8">
                 <ul class="flex flex-col gap-4">
                     <li class="font-bold text-dark-pink"><a href="">Startsida</a></li>
                     <li><a href="">Bostäder</a></li>
@@ -67,14 +66,12 @@
                     <li><a href="">Om oss</a></li>
                     <li><a href="">Kontakta oss</a></li>
                     <li><a href="">Felanmälan</a></li>
-                </ul>
-            </nav>
-
-            <!-- Socials -->
-            <nav>
-                <ul class="text-dark-pink text-2xl flex gap-4 justify-center mb-14">
-                    <li><a href="">facebook</a></li>
-                    <li><a href="">instagram</a></li>
+                    <nav>
+                        <ul class="text-dark-pink flex gap-4 mt-4">
+                            <li><a href="">facebook</a></li>
+                            <li><a href="">instagram</a></li>
+                        </ul>
+                    </nav>
                 </ul>
             </nav>
         </nav>
@@ -113,7 +110,7 @@
                 <div class="mt-8 flex flex-col items-center md:justify-between md:flex-row flex-wrap lg:gap-x-1 gap-y-10 pb-16">
                     <!-- Card 1 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/13.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/10.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Vasastan</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Vikingagatan 37</h3>
                         <p class="text-lg text-dark-beige mb-3">10 450 kr / månad</p>
@@ -233,7 +230,7 @@
                     </div>
                     <!-- Card 6 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/16.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/12.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Solna</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Nybodagatan 16</h3>
                         <p class="text-lg text-dark-beige mb-3">13 250 kr / månad</p>
@@ -257,7 +254,7 @@
                     </div>
                     <!-- Card 7 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/11.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/9.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Södermalm</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Magnus Ladulåsgatan 21</h3>
                         <p class="text-lg text-dark-beige mb-3">14 800 kr / månad</p>
@@ -281,7 +278,7 @@
                     </div>
                     <!-- Card 8 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/14.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/11.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Täby</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Kometvägen 8</h3>
                         <p class="text-lg text-dark-beige mb-3">8 800 kr / månad</p>
@@ -305,7 +302,7 @@
                     </div>
                     <!-- Card 9 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/15.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/13.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Solna Strand</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Solna Strandväg 15</h3>
                         <p class="text-lg text-dark-beige mb-3">12 850 kr / månad</p>
