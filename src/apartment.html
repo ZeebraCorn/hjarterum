@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjärterum</title>
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./output.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/src/slider.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div x-data="{ open: false }">
+        <!-- Header -->
+        <header class="h-20 w-full fixed flex items-center z-50 bg-whiteish px-8 2xl:px-64 mb-16">
+            <div class="w-full flex items-end lg:items-center justify-between">
+                <!-- Logo -->
+                <a href="">
+                    <img class="w-[195px]" src="assets/icons/logo.svg" alt="Hjärterum logo">
+                </a>
+
+                <!-- Responsive Menu Buttons -->
+                <div>
+                       <!-- Menu button -->
+                    <button @click="open = true" x-show="!open" class="menu-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>  
+                    </button>
+
+                     <!-- Close Button -->
+                    <button @click="open = false" x-show="open" class="close-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>                  
+                    </button>
+                </div>
+
+                <!-- Menu -->
+                <nav class="lg:flex cursor-pointer hidden">
+                    <ul class="flex gap-8 text-lg text-dark-beige">
+                        <li class="font-bold"><a href="/src/index.html">Startsida</a></li>
+                        <li class="hover:font-bold"><a href="/src/housing.html">Bostäder</a></li>
+                        <li class="hover:font-bold"><a href="">Våra områden</a></li>
+                        <li class="hover:font-bold"><a href="">Mina sidor</a></li>
+                        <li class="hover:font-bold"><a href="">Om oss</a></li>
+                        <li class="hover:font-bold"><a href="">Kontakta oss</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Responsive Menu -->
+        <nav class="responsive-menu w-full fixed z-40 invisible">
+
+            <!-- Menu -->
+            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500 invisible'  : 'translate-y-0 transition-all duration-500 visible'"  class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 min-h-28 top-20 pb-8">
+                <ul class="flex flex-col gap-4">
+                    <li class="font-bold text-dark-pink"><a href="index.html">Startsida</a></li>
+                    <li><a href="/housing.html">Bostäder</a></li>
+                    <li><a href="">Våra områden</a></li>
+                    <li><a href="">Mina sidor</a></li>
+                    <li><a href="">Om oss</a></li>
+                    <li><a href="">Kontakta oss</a></li>
+                    <li><a href="">Felanmälan</a></li>
+                    <nav>
+                        <ul class="text-dark-pink flex gap-4 mt-4">
+                            <li><a href="">facebook</a></li>
+                            <li><a href="">instagram</a></li>
+                        </ul>
+                    </nav>
+                </ul>
+            </nav>
+        </nav>
+
+        <!-- Housing -->
+        <div class="pt-36">
+            <section class="bg-whiteish-opacity-50 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto px-0">
+            <div class="py-8 lg:py-14 px-4 lg:px-16 xl:px-28">
+                <!-- Apartment Header -->
+                    <p class="text-sm text-dark-beige mb-2">Stockholm - Vasastan</p>
+                   <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Vikingagatan 37</h2>
+                    <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-52 z-10 hover:bg-transparent hover:text-dark-beige" href="/src/housing.html">Anmäl intresse</a>
+                </header>
+
+                <!-- Apartment images -->
+                <div>
+                    <div x-data="{ imageSrc: `bg-[url('/src/assets/images/10.jpg')]` }" class="flex gap-6">
+                        <figure x-bind:class="imageSrc" class="w-[892px] h-[444px] bg-cover bg-center mt-8"></figure>
+                        <div class="flex flex-col gap-6 justify-end">
+                            <figure @click="imageSrc = `bg-[url('/src/assets/images/kitchen.jpg')]`" class="bg-[url('/src/assets/images/kitchen.jpg')] w-[225px] h-[132px] bg-cover bg-center"></figure>
+                            <figure @click="imageSrc = `bg-[url('/src/assets/images/bedroom.jpg')]`" class="bg-[url('/src/assets/images/bedroom.jpg')] w-[225px] h-[132px] bg-cover bg-center"></figure>
+                            <figure @click="imageSrc = `bg-[url('/src/assets/images/planritning.jpg')]`" class="bg-[url('/src/assets/images/planritning.jpg')] w-[225px] h-[132px] bg-cover bg-center"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apartment Description -->
+                <div class="flex gap-8">
+                    <div>
+                        <div class="max-w-[704px] my-8">
+                            <p class="text-lg text-dark-beige">
+                                Lorem ipsum dolor sit amet consectetur. Posuere mi dictum sodales nulla ut quis quam eu arcu. Mattis vel enim velit justo. In leo vitae morbi est netus phasellus felis. Aliquam lectus ultrices aenean cursus.<br>
+                                Amet mauris viverra fringilla lorem volutpat. Posuere sed augue amet facilisis nullam ut euismod sit at. Quam mauris enim massa proin nulla tempus duis eu nisi. Arcu nisi adipiscing nunc porta nulla. Lectus 
+                                mauris nibh id diam faucibus faucibus risus sit. Etiam consectetur ullamcorper mauris vel auctor lobortis dolor id. Interdum nulla velit justo elementum amet. Etiam sit nibh condimentum nam cum. Porta varius 
+                                viverra sed ornare tellus consectetur odio.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="">
+                                <figure class="bg-[url('/src/assets/images/map.png')] w-[746px] h-[508px] bg-cover bg-center"></figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-light-pink-opacity py-4 px-8 mt-8">
+                        <!-- Infobox -->
+                        <h3 class="text-4xl text-dark-beige">Snabbfakta</h3>
+                        <div class="flex gap-4 mt-4">
+                            <div>
+                                <p class="text-dark-beige font-bold">Tillgänglig:</p>
+                                <p class="text-dark-beige font-bold">Antal rum:</p>
+                                <p class="text-dark-beige font-bold">Storlek:</p>
+                                <p class="text-dark-beige font-bold">Våning:</p>
+                                <p class="text-dark-beige font-bold">Hyra:</p>
+                                <p class="text-dark-beige font-bold">Fastighet:</p>
+                                <p class="text-dark-beige font-bold">Objektnummer:</p>
+                                <p class="text-dark-beige font-bold">Byggnadsår:</p>
+                                <p class="text-dark-beige font-bold">Renoverad:</p>
+                            </div>
+                            <div>
+                                <p class="text-dark-beige">1 juli, 2024</p>
+                                <p class="text-dark-beige">3</p>
+                                <p class="text-dark-beige">92 m²</p>
+                                <p class="text-dark-beige">4</p>
+                                <p class="text-dark-beige">10 450 kr / månad</p>
+                                <p class="text-dark-beige">Hammaren 2</p>
+                                <p class="text-dark-beige">1234567-8910</p>
+                                <p class="text-dark-beige">1914</p>
+                                <p class="text-dark-beige">1992</p>
+                            </div>
+                        </div>
+                        <h4 class="text-4xl text-dark-beige mt-6 mb-4">Ansvarig uthyrare</h4>
+                        <div>
+                            <p class="text-dark-beige font-bold">Anna Andersson</p>
+                            <p class="text-dark-beige"><span class="font-bold">E-mail:</span> anna.andersson@hjarterum.se</p>
+                            <p class="text-dark-beige"><span class="font-bold">Telefon:</span> 070-123 456</p>
+                        </div>
+                        <h4 class="text-4xl text-dark-beige mt-6 mb-4">Faciliteter</h4>
+                        <div class="flex gap-6 items-center">
+                            <div>
+                                <!-- Elevator -->
+                                <figure>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_100_10)">
+                                        <path d="M24 24H0V0H24V24ZM0.650389 23.3496H23.3496V0.650389H0.650389V23.3496Z" fill="#86694F"/>
+                                        <path d="M6.41381 7.33458C5.36417 7.33458 4.51416 6.48457 4.51416 5.43493C4.51416 4.38529 5.36417 3.53528 6.41381 3.53528C7.46345 3.53528 8.31346 4.38529 8.31346 5.43493C8.31346 6.48457 7.46345 7.33458 6.41381 7.33458ZM6.41381 4.18567C5.72479 4.18567 5.16455 4.7459 5.16455 5.43493C5.16455 6.12396 5.72479 6.68419 6.41381 6.68419C7.10284 6.68419 7.66307 6.12396 7.66307 5.43493C7.66307 4.7459 7.10284 4.18567 6.41381 4.18567Z" fill="#86694F"/>
+                                        <path d="M8.31349 20.4647H4.51419V16.3692H3.14258V8.4422H9.6851V16.3692H8.31349V20.4647ZM5.16458 19.8143H7.6631V15.7188H9.03472V9.09259H3.79297V15.7188H5.16458V19.8143Z" fill="#86694F"/>
+                                        <path d="M20.6515 11.282H12.1191L16.3885 5.76978L20.6579 11.282H20.6515ZM13.4457 10.6316H19.3314L16.3885 6.83229L13.4457 10.6316Z" fill="#86694F"/>
+                                        <path d="M16.3885 18.739L12.1191 13.2267H20.6515L16.3821 18.739H16.3885ZM13.4457 13.8771L16.3885 17.6764L19.3314 13.8771H13.4457Z" fill="#86694F"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_100_10">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>                                        
+                                </figure>
+                                <!-- Balcony -->
+                                <figure>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_100_16)">
+                                        <path d="M18.1808 11.5748V0H5.9104V11.5748H0V24.0065H24V11.5748H18.1808ZM0.651643 12.224H3.03665V23.3508H0.651643V12.224ZM5.9104 23.3508H3.69481V12.224H5.9104V23.3508ZM8.78414 23.3508H6.56856V12.224H8.78414V23.3508ZM11.7361 23.3508H9.43579V12.224H11.7361V23.3508ZM14.5251 23.3508H12.3877V12.224H14.5251V23.3508ZM17.5292 23.3508H15.1833V12.224H17.5292V23.3508ZM17.5292 11.5748H6.56204V0.649175H17.5227V11.5683L17.5292 11.5748ZM20.5267 23.3508H18.1808V12.224H20.5267V23.3508ZM23.3418 23.3508H21.1784V12.224H23.3418V23.3508Z" fill="#86694F"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_100_16">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                </figure>
+                                <!-- Laundry Machine -->
+                                <figure>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_100_19)">
+                                        <path d="M3.4157 1.83582C2.59054 1.83582 1.92529 2.50746 1.92529 3.32622C1.92529 4.14498 2.59693 4.81663 3.4157 4.81663C4.23446 4.81663 4.9061 4.14498 4.9061 3.32622C4.9061 2.50746 4.24086 1.83582 3.4157 1.83582ZM3.4157 4.17697C2.94235 4.17697 2.56495 3.79317 2.56495 3.32622C2.56495 2.85927 2.94875 2.47547 3.4157 2.47547C3.88265 2.47547 4.26644 2.85927 4.26644 3.32622C4.26644 3.79317 3.88265 4.17697 3.4157 4.17697Z" fill="#86694F"/>
+                                        <path d="M7.24089 1.83582C6.41573 1.83582 5.75049 2.50746 5.75049 3.32622C5.75049 4.14498 6.41573 4.81663 7.24089 4.81663C8.06605 4.81663 8.7313 4.14498 8.7313 3.32622C8.7313 2.50746 8.05966 1.83582 7.24089 1.83582ZM7.24089 4.17697C6.77394 4.17697 6.39015 3.79317 6.39015 3.32622C6.39015 2.85927 6.77394 2.47547 7.24089 2.47547C7.70784 2.47547 8.09164 2.85927 8.09164 3.32622C8.09164 3.79317 7.70784 4.17697 7.24089 4.17697Z" fill="#86694F"/>
+                                        <path d="M0 0V24H24V0H0ZM23.3603 23.3603H0.639659V6.24307H23.3603V23.3603ZM23.3603 5.60341H0.639659V0.639659H23.3603V5.60341Z" fill="#86694F"/>
+                                        <path d="M11.9999 8.46906C8.48813 8.46906 5.63525 11.3219 5.63525 14.8401C5.63525 18.3582 8.48813 21.2047 11.9999 21.2047C15.5116 21.2047 18.3709 18.3518 18.3709 14.8401C18.3709 11.3283 15.5116 8.46906 11.9999 8.46906ZM11.9999 20.565C8.84634 20.565 6.27491 17.9936 6.27491 14.8401C6.27491 11.6865 8.84634 9.10871 11.9999 9.10871C15.1534 9.10871 17.7312 11.6801 17.7312 14.8401C17.7312 18 15.1598 20.565 11.9999 20.565Z" fill="#86694F"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_100_19">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>                                        
+                                </figure>
+                            </div>
+                            <div>
+                                <p class="text-dark-beige">Hiss</p>
+                                <p class="text-dark-beige">Balkong</p>
+                                <p class="text-dark-beige">Tvättmaskin</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            </section>
+        </div>
+
+                        <!-- Section Line -->
+         <div class="border-2 border-dark-pink max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] my-16 mx-auto"></div>
+
+        <!-- Footer -->
+        <footer class="bg-lighter-beige sm:px-4 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto mb-14">
+            <div class="py-8 md:py-14 md:px-[100px] lg:px-[200px] xl:px-[350px]">
+                <div class="max-w-[670px] flex flex-col">
+                    <!-- Footer Logo -->
+                    <div>
+                      <a href="">
+                        <img class="w-[195px] pl-16 sm:pl-0" src="assets/icons/logo.svg" alt="Hjärterum logo">
+                      </a>
+                    </div>
+                    <div class="hidden sm:flex justify-between mt-3">
+                        <!-- Footer Adress -->
+                        <div>
+                            <p class="text-white">Amors väg 32</p>
+                            <p class="text-white">123 45 Stockholm</p>
+                            <p class="text-white">info@hjarterum.se</p>
+                            <p class="text-white">08 - 12 34 56</p>
+                        </div>
+                        <!-- Footer Menu -->
+                        <div>
+                            <ul class="text-white flex flex-col gap-4">
+                                <li><a href="">Felanmälan</a></li>
+                                <li><a href="">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Socials -->
+                        <div>
+                            <ul class="text-dark-pink flex flex-col gap-4">
+                                <li><a href="">facebook</a></li>
+                                <li><a href="">instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hidden sm:flex justify-between items-end mt-4">
+                        <!-- Opening Hours -->
+                        <div>
+                            <p class="text-dark-pink">Öppettider:</p>
+                            <p class="text-white">Måndag-fredag 08:00-16:30</p>
+                        </div>
+                        <!-- Cookies & Integritypolicy -->
+                        <div>
+                            <ul class="text-sm text-white flex gap-12">
+                                <li><a href="">Cookies</a></li>
+                                <li><a href="">Integritetspolicy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Footer Responsive -->
+                    <div class="flex flex-col gap-4 pl-16 mt-4 mb-10 sm:hidden">
+                        <!-- Adress -->
+                        <div>
+                            <p class="text-white">Amors väg 32</p>
+                            <p class="text-white">123 45 Stockholm</p>
+                            <p class="text-white">info@hjarterum.se</p>
+                            <p class="text-white">08 - 12 34 5
+                        </div>
+                        <!-- Opening Hours -->
+                        <div>
+                            <p class="text-dark-pink">Öppettider:</p>
+                            <p class="text-white">Måndag-fredag 08:00-16:30</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-16 pl-16 mb-8 sm:hidden">
+                        <!-- Footer Menu -->
+                        <div>
+                            <ul class="text-white flex flex-col gap-3">
+                                <li><a href="">Felanmälan</a></li>
+                                <li><a href="">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Socials -->
+                        <div>
+                            <ul class="text-dark-pink flex flex-col gap-3">
+                                <li><a href="">facebook</a></li>
+                                <li><a href="">instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Cookies & Integritypolicy -->
+                     <div>
+                        <ul class="text-sm text-white flex gap-20 pl-16 sm:hidden">
+                            <li><a href="">Cookies</a></li>
+                            <li><a href="">Integritetspolicy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+</body>
+</html>

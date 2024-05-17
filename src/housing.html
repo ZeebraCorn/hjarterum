@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hjärterum</title>
     <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./output.css">
     <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/src/slider.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,10 +58,10 @@
         </header>
 
         <!-- Responsive Menu -->
-        <nav class="responsive-menu w-full fixed z-40">
+        <nav class="responsive-menu w-full fixed z-40 invisible">
 
             <!-- Menu -->
-            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500'  : 'translate-y-0 transition-all duration-500'"  class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 min-h-28 top-20 pb-8">
+            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500 invisible'  : 'translate-y-0 transition-all duration-500 visible'"  class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 min-h-28 top-20 pb-8">
                 <ul class="flex flex-col gap-4">
                     <li class="font-bold text-dark-pink"><a href="index.html">Startsida</a></li>
                     <li><a href="/housing.html">Bostäder</a></li>
@@ -84,11 +88,37 @@
                 <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Lediga bostäder</h2>
                 </header>
+  
                 <!-- Housing Cards -->
                 <div class="mt-8 flex flex-col items-center md:justify-between md:flex-row flex-wrap lg:gap-x-1 gap-y-10 pb-14">
                     <!-- Card 1 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/10.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <!-- Slider main container -->
+                        <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/10.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Vasastan</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Vikingagatan 37</h3>
                         <p class="text-lg text-dark-beige mb-3">10 450 kr / månad</p>
@@ -104,7 +134,7 @@
                                 <p class="text-sm text-dark-beige">1 juli, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -112,7 +142,35 @@
                     </div>
                     <!-- Card 2 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/2.jpg')] w-80 h-52 bg-cover bg-bottom mb-3"></figure>
+                         <!-- Slider main container -->
+                         <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/2.jpg')] w-80 h-52 bg-cover bg-bottom mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-2.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-2.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-2.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/livingroom-2.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Vasastan</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Odenagatan 45</h3>
                         <p class="text-lg text-dark-beige mb-3">15 670 kr / månad</p>
@@ -136,7 +194,32 @@
                     </div>
                     <!-- Card 3 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/5.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                         <!-- Slider main container -->
+                         <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/5.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-3.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-3.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-3.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Lidingö</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Lokevägen 12</h3>
                         <p class="text-lg text-dark-beige mb-3">8 600 kr / månad</p>
@@ -160,7 +243,32 @@
                     </div>
                     <!-- Card 4 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/6.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                         <!-- Slider main container -->
+                         <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/6.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-4.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-4.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-4.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Bromma</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Rökstensvägen 8</h3>
                         <p class="text-lg text-dark-beige mb-3">7 850 kr / månad</p>
@@ -184,7 +292,32 @@
                     </div>
                     <!-- Card 5 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/7.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <!-- Slider main container -->
+                        <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/7.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-5.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-5.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-5.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Södermalm</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Krukmakargatan 5</h3>
                         <p class="text-lg text-dark-beige mb-3">12 450 kr / månad</p>
@@ -208,7 +341,32 @@
                     </div>
                     <!-- Card 6 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/12.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                         <!-- Slider main container -->
+                         <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/12.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-6.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-6.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-6.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Solna</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Nybodagatan 16</h3>
                         <p class="text-lg text-dark-beige mb-3">13 250 kr / månad</p>
@@ -232,7 +390,32 @@
                     </div>
                     <!-- Card 7 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/9.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                         <!-- Slider main container -->
+                         <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/9.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-7.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-7.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-7.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Södermalm</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Magnus Ladulåsgatan 21</h3>
                         <p class="text-lg text-dark-beige mb-3">14 800 kr / månad</p>
@@ -256,7 +439,32 @@
                     </div>
                     <!-- Card 8 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/11.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <!-- Slider main container -->
+                        <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/11.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-8.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-8.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-8.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Täby</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Kometvägen 8</h3>
                         <p class="text-lg text-dark-beige mb-3">8 800 kr / månad</p>
@@ -280,7 +488,32 @@
                     </div>
                     <!-- Card 9 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/13.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                         <!-- Slider main container -->
+                         <div class="swiper w-80 h-52">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/13.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/kitchen-9.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bedroom-9.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="bg-[url('/src/assets/images/bathroom-9.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                            </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev text-white font-black"></div>
+                            <div class="swiper-button-next text-white font-black"></div>
+                        </div>
+                        <!-- Card Content -->
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Solna Strand</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Solna Strandväg 15</h3>
                         <p class="text-lg text-dark-beige mb-3">12 850 kr / månad</p>

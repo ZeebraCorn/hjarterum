@@ -14,7 +14,8 @@ module.exports = {
         'whiteish': '#FEF7F5',
         'light-pink': '#FCD5CE',
         'dark-pink': '#FFB5A7',
-        'whiteish-opacity-50': '#FFFBFA'
+        'whiteish-opacity-50': '#FFFBFA',
+        'light-pink-opacity': '#FDE8E4'
       }
     },
   },
