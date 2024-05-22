@@ -22,7 +22,7 @@
         <header class="h-20 w-full fixed flex items-center z-50 bg-whiteish px-8 2xl:px-64 mb-16">
             <div class="w-full flex items-end lg:items-center justify-between">
                 <!-- Logo -->
-                <a href="">
+                <a href="/src/index.html">
                     <img class="w-[195px]" src="assets/icons/logo.svg" alt="Hjärterum logo">
                 </a>
 
@@ -46,7 +46,7 @@
                 <!-- Menu -->
                 <nav class="lg:flex cursor-pointer hidden">
                     <ul class="flex gap-8 text-lg text-dark-beige">
-                        <li class="font-bold"><a href="/src/index.html">Startsida</a></li>
+                        <li class="hover:font-bold"><a href="/src/index.html">Startsida</a></li>
                         <li class="hover:font-bold"><a href="/src/housing.html">Bostäder</a></li>
                         <li class="hover:font-bold"><a href="">Våra områden</a></li>
                         <li class="hover:font-bold"><a href="">Mina sidor</a></li>
@@ -61,10 +61,10 @@
         <nav class="responsive-menu w-full fixed z-40 invisible">
 
             <!-- Menu -->
-            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500 invisible'  : 'translate-y-0 transition-all duration-500 visible'"  class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 min-h-28 top-20 pb-8">
+            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500 invisible'  : 'translate-y-0 transition-all duration-500 visible'"  class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 mt-20 min-h-28 top-20 pt-4 pb-8">
                 <ul class="flex flex-col gap-4">
-                    <li class="font-bold text-dark-pink"><a href="index.html">Startsida</a></li>
-                    <li><a href="/housing.html">Bostäder</a></li>
+                    <li><a href="/src/index.html">Startsida</a></li>
+                    <li><a href="/src/housing.html">Bostäder</a></li>
                     <li><a href="">Våra områden</a></li>
                     <li><a href="">Mina sidor</a></li>
                     <li><a href="">Om oss</a></li>
@@ -80,19 +80,24 @@
             </nav>
         </nav>
 
-        <!-- Housing -->
-        <div class="pt-36">
+        <!-- Aoartment -->
+        <div class="pt-28 sm:pt-36">
             <section class="bg-whiteish-opacity-50 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto px-0">
-            <div class="py-8 lg:py-14 px-4 lg:px-16 xl:px-28">
+            <div class="py-8 px-4 lg:py-14 lg:px-16 xl:px-28">
                 <!-- Apartment Header -->
                     <p class="text-sm text-dark-beige mb-2">Stockholm - Vasastan</p>
-                   <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
+                <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end max-w-[1140px]">
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Vikingagatan 37</h2>
-                    <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-52 z-10 hover:bg-transparent hover:text-dark-beige" href="/src/housing.html">Anmäl intresse</a>
+                    <a class="hidden sm:block uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-40 sm:max-w-52 z-10 hover:bg-transparent hover:text-dark-beige" href="">Anmäl intresse</a>
+                    <a class="sm:hidden uppercase text-lighter-beige tracking-wide font-lato font-bold text-base flex gap-0.5" href="/src/apartment.html">Anmäl intresse
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>  
+                    </a>
                 </header>
 
                 <!-- Apartment images -->
-                <div>
+                <div class="hidden md:block">
                     <div x-data="{ imageSrc: `bg-[url('/src/assets/images/10.jpg')]` }" class="flex gap-6">
                         <figure x-bind:class="imageSrc" class="w-[892px] h-[444px] bg-cover bg-center mt-8"></figure>
                         <div class="flex flex-col gap-6 justify-end">
@@ -103,10 +108,39 @@
                     </div>
                 </div>
 
+                <!-- Responsive Apartment Images -->
+                <div class="block md:hidden mt-8">
+                     <!-- Slider main container -->
+                     <div class="swiper w-[308px] h-52 sm:w-[544px] sm:h-72">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <figure class="bg-[url('/src/assets/images/10.jpg')] w-[308px] h-52 sm:w-[544px] sm:h-72 bg-cover bg-center mb-3"></figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="bg-[url('/src/assets/images/kitchen.jpg')] w-[308px] h-52 sm:w-[544px] sm:h-72 bg-cover bg-center mb-3"></figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="bg-[url('/src/assets/images/bedroom.jpg')] w-[308px] h-52 sm:w-[544px] sm:h-72 bg-cover bg-center mb-3"></figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="bg-[url('/src/assets/images/planritning.jpg')] w-[308px] h-52 sm:w-[544px] sm:h-72 bg-cover bg-center mb-3"></figure>
+                        </div>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-prev text-white font-black"></div>
+                        <div class="swiper-button-next text-white font-black"></div>
+                    </div>
+                </div>
+
                 <!-- Apartment Description -->
-                <div class="flex gap-8">
+                <div class="flex flex-col lg:flex-row lg:gap-8">
                     <div>
-                        <div class="max-w-[704px] my-8">
+                        <div class="my-8 xl:max-w-[590px] 2xl:max-w-[704px]">
                             <p class="text-lg text-dark-beige">
                                 Lorem ipsum dolor sit amet consectetur. Posuere mi dictum sodales nulla ut quis quam eu arcu. Mattis vel enim velit justo. In leo vitae morbi est netus phasellus felis. Aliquam lectus ultrices aenean cursus.<br>
                                 Amet mauris viverra fringilla lorem volutpat. Posuere sed augue amet facilisis nullam ut euismod sit at. Quam mauris enim massa proin nulla tempus duis eu nisi. Arcu nisi adipiscing nunc porta nulla. Lectus 
@@ -115,101 +149,164 @@
                             </p>
                         </div>
                         <div>
-                            <a href="">
-                                <figure class="bg-[url('/src/assets/images/map.png')] w-[746px] h-[508px] bg-cover bg-center"></figure>
+                            <a href="https://www.google.com/maps/place/Vikingagatan+37,+113+33+Stockholm/@59.343923,18.0303791,16z/data=!3m1!4b1!4m6!3m5!1s0x465f9d7783981af1:0x836cda6181859621!8m2!3d59.343923!4d18.032954!16s%2Fg%2F11hbs_4qrh?entry=ttu" target="_blank">
+                                <figure class="bg-[url('/src/assets/images/map.png')] h-[340px] sm:h-[508px] xl:w-[590px] 2xl:w-[746px] bg-cover bg-center"></figure>
                             </a>
                         </div>
                     </div>
-                    <div class="bg-light-pink-opacity py-4 px-8 mt-8">
-                        <!-- Infobox -->
-                        <h3 class="text-4xl text-dark-beige">Snabbfakta</h3>
-                        <div class="flex gap-4 mt-4">
+                    <!-- Infobox -->
+                    <div class="bg-light-pink-opacity py-4 px-8 mt-8 max-w-[330px] sm:max-w-[363px]">
+                        <!-- Facts -->
+                        <h3 class="text-3xl sm:text-4xl text-dark-beige">Snabbfakta</h3>
+                        <div class="flex gap-2 sm:gap-4 mt-4">
                             <div>
-                                <p class="text-dark-beige font-bold">Tillgänglig:</p>
-                                <p class="text-dark-beige font-bold">Antal rum:</p>
-                                <p class="text-dark-beige font-bold">Storlek:</p>
-                                <p class="text-dark-beige font-bold">Våning:</p>
-                                <p class="text-dark-beige font-bold">Hyra:</p>
-                                <p class="text-dark-beige font-bold">Fastighet:</p>
-                                <p class="text-dark-beige font-bold">Objektnummer:</p>
-                                <p class="text-dark-beige font-bold">Byggnadsår:</p>
-                                <p class="text-dark-beige font-bold">Renoverad:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Tillgänglig:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Antal rum:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Storlek:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Våning:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Hyra:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Fastighet:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Objektnummer:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Byggnadsår:</p>
+                                <p class="text-base sm:text-lg text-dark-beige font-bold">Renoverad:</p>
                             </div>
                             <div>
-                                <p class="text-dark-beige">1 juli, 2024</p>
-                                <p class="text-dark-beige">3</p>
-                                <p class="text-dark-beige">92 m²</p>
-                                <p class="text-dark-beige">4</p>
-                                <p class="text-dark-beige">10 450 kr / månad</p>
-                                <p class="text-dark-beige">Hammaren 2</p>
-                                <p class="text-dark-beige">1234567-8910</p>
-                                <p class="text-dark-beige">1914</p>
-                                <p class="text-dark-beige">1992</p>
+                                <p class="text-base sm:text-lg text-dark-beige">1 juli, 2024</p>
+                                <p class="text-base sm:text-lg text-dark-beige">3</p>
+                                <p class="text-base sm:text-lg text-dark-beige">92 m²</p>
+                                <p class="text-base sm:text-lg text-dark-beige">4</p>
+                                <p class="text-base sm:text-lg text-dark-beige">10 450 kr <span class="hidden sm:block">/ månad</span></p>
+                                <p class="text-base sm:text-lg text-dark-beige">Hammaren 2</p>
+                                <p class="text-base sm:text-lg text-dark-beige">1234567-8910</p>
+                                <p class="text-base sm:text-lg text-dark-beige">1914</p>
+                                <p class="text-base sm:text-lg text-dark-beige">1992</p>
                             </div>
                         </div>
-                        <h4 class="text-4xl text-dark-beige mt-6 mb-4">Ansvarig uthyrare</h4>
+                        <!-- Renter -->
+                        <h4 class="text-3xl sm:text-4xl text-dark-beige mt-6 mb-4">Ansvarig uthyrare</h4>
                         <div>
-                            <p class="text-dark-beige font-bold">Anna Andersson</p>
-                            <p class="text-dark-beige"><span class="font-bold">E-mail:</span> anna.andersson@hjarterum.se</p>
-                            <p class="text-dark-beige"><span class="font-bold">Telefon:</span> 070-123 456</p>
+                            <p class="text-base sm:text-lg text-dark-beige font-bold">Anna Andersson</p>
+                            <p class="text-base sm:text-lg text-dark-beige"><span class="font-bold">E-mail:</span> anna.andersson@hjarterum.se</p>
+                            <p class="text-base sm:text-lg text-dark-beige"><span class="font-bold">Telefon:</span> 070-123 456</p>
                         </div>
-                        <h4 class="text-4xl text-dark-beige mt-6 mb-4">Faciliteter</h4>
-                        <div class="flex gap-6 items-center">
-                            <div>
-                                <!-- Elevator -->
-                                <figure>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_100_10)">
-                                        <path d="M24 24H0V0H24V24ZM0.650389 23.3496H23.3496V0.650389H0.650389V23.3496Z" fill="#86694F"/>
-                                        <path d="M6.41381 7.33458C5.36417 7.33458 4.51416 6.48457 4.51416 5.43493C4.51416 4.38529 5.36417 3.53528 6.41381 3.53528C7.46345 3.53528 8.31346 4.38529 8.31346 5.43493C8.31346 6.48457 7.46345 7.33458 6.41381 7.33458ZM6.41381 4.18567C5.72479 4.18567 5.16455 4.7459 5.16455 5.43493C5.16455 6.12396 5.72479 6.68419 6.41381 6.68419C7.10284 6.68419 7.66307 6.12396 7.66307 5.43493C7.66307 4.7459 7.10284 4.18567 6.41381 4.18567Z" fill="#86694F"/>
-                                        <path d="M8.31349 20.4647H4.51419V16.3692H3.14258V8.4422H9.6851V16.3692H8.31349V20.4647ZM5.16458 19.8143H7.6631V15.7188H9.03472V9.09259H3.79297V15.7188H5.16458V19.8143Z" fill="#86694F"/>
-                                        <path d="M20.6515 11.282H12.1191L16.3885 5.76978L20.6579 11.282H20.6515ZM13.4457 10.6316H19.3314L16.3885 6.83229L13.4457 10.6316Z" fill="#86694F"/>
-                                        <path d="M16.3885 18.739L12.1191 13.2267H20.6515L16.3821 18.739H16.3885ZM13.4457 13.8771L16.3885 17.6764L19.3314 13.8771H13.4457Z" fill="#86694F"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_100_10">
-                                        <rect width="24" height="24" fill="white"/>
-                                        </clipPath>
-                                        </defs>
-                                        </svg>                                        
-                                </figure>
-                                <!-- Balcony -->
-                                <figure>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_100_16)">
-                                        <path d="M18.1808 11.5748V0H5.9104V11.5748H0V24.0065H24V11.5748H18.1808ZM0.651643 12.224H3.03665V23.3508H0.651643V12.224ZM5.9104 23.3508H3.69481V12.224H5.9104V23.3508ZM8.78414 23.3508H6.56856V12.224H8.78414V23.3508ZM11.7361 23.3508H9.43579V12.224H11.7361V23.3508ZM14.5251 23.3508H12.3877V12.224H14.5251V23.3508ZM17.5292 23.3508H15.1833V12.224H17.5292V23.3508ZM17.5292 11.5748H6.56204V0.649175H17.5227V11.5683L17.5292 11.5748ZM20.5267 23.3508H18.1808V12.224H20.5267V23.3508ZM23.3418 23.3508H21.1784V12.224H23.3418V23.3508Z" fill="#86694F"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_100_16">
-                                        <rect width="24" height="24" fill="white"/>
-                                        </clipPath>
-                                        </defs>
+                        <!-- Facilities -->
+                        <h4 class="text-3xl sm:text-4xl text-dark-beige mt-6 mb-4">Faciliteter</h4>
+                        <div class="flex flex-col gap-6 sm:flex-row">
+                            <div class="flex gap-6 items-center">
+                                <div class="flex flex-col gap-6">
+                                    <!-- Elevator -->
+                                    <figure>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_100_10)">
+                                            <path d="M24 24H0V0H24V24ZM0.650389 23.3496H23.3496V0.650389H0.650389V23.3496Z" fill="#86694F"/>
+                                            <path d="M6.41381 7.33458C5.36417 7.33458 4.51416 6.48457 4.51416 5.43493C4.51416 4.38529 5.36417 3.53528 6.41381 3.53528C7.46345 3.53528 8.31346 4.38529 8.31346 5.43493C8.31346 6.48457 7.46345 7.33458 6.41381 7.33458ZM6.41381 4.18567C5.72479 4.18567 5.16455 4.7459 5.16455 5.43493C5.16455 6.12396 5.72479 6.68419 6.41381 6.68419C7.10284 6.68419 7.66307 6.12396 7.66307 5.43493C7.66307 4.7459 7.10284 4.18567 6.41381 4.18567Z" fill="#86694F"/>
+                                            <path d="M8.31349 20.4647H4.51419V16.3692H3.14258V8.4422H9.6851V16.3692H8.31349V20.4647ZM5.16458 19.8143H7.6631V15.7188H9.03472V9.09259H3.79297V15.7188H5.16458V19.8143Z" fill="#86694F"/>
+                                            <path d="M20.6515 11.282H12.1191L16.3885 5.76978L20.6579 11.282H20.6515ZM13.4457 10.6316H19.3314L16.3885 6.83229L13.4457 10.6316Z" fill="#86694F"/>
+                                            <path d="M16.3885 18.739L12.1191 13.2267H20.6515L16.3821 18.739H16.3885ZM13.4457 13.8771L16.3885 17.6764L19.3314 13.8771H13.4457Z" fill="#86694F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_100_10">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>                                        
+                                    </figure>
+                                    <!-- Balcony -->
+                                    <figure>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_100_16)">
+                                            <path d="M18.1808 11.5748V0H5.9104V11.5748H0V24.0065H24V11.5748H18.1808ZM0.651643 12.224H3.03665V23.3508H0.651643V12.224ZM5.9104 23.3508H3.69481V12.224H5.9104V23.3508ZM8.78414 23.3508H6.56856V12.224H8.78414V23.3508ZM11.7361 23.3508H9.43579V12.224H11.7361V23.3508ZM14.5251 23.3508H12.3877V12.224H14.5251V23.3508ZM17.5292 23.3508H15.1833V12.224H17.5292V23.3508ZM17.5292 11.5748H6.56204V0.649175H17.5227V11.5683L17.5292 11.5748ZM20.5267 23.3508H18.1808V12.224H20.5267V23.3508ZM23.3418 23.3508H21.1784V12.224H23.3418V23.3508Z" fill="#86694F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_100_16">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                    </figure>
+                                    <!-- Laundry Machine -->
+                                    <figure>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_100_19)">
+                                            <path d="M3.4157 1.83582C2.59054 1.83582 1.92529 2.50746 1.92529 3.32622C1.92529 4.14498 2.59693 4.81663 3.4157 4.81663C4.23446 4.81663 4.9061 4.14498 4.9061 3.32622C4.9061 2.50746 4.24086 1.83582 3.4157 1.83582ZM3.4157 4.17697C2.94235 4.17697 2.56495 3.79317 2.56495 3.32622C2.56495 2.85927 2.94875 2.47547 3.4157 2.47547C3.88265 2.47547 4.26644 2.85927 4.26644 3.32622C4.26644 3.79317 3.88265 4.17697 3.4157 4.17697Z" fill="#86694F"/>
+                                            <path d="M7.24089 1.83582C6.41573 1.83582 5.75049 2.50746 5.75049 3.32622C5.75049 4.14498 6.41573 4.81663 7.24089 4.81663C8.06605 4.81663 8.7313 4.14498 8.7313 3.32622C8.7313 2.50746 8.05966 1.83582 7.24089 1.83582ZM7.24089 4.17697C6.77394 4.17697 6.39015 3.79317 6.39015 3.32622C6.39015 2.85927 6.77394 2.47547 7.24089 2.47547C7.70784 2.47547 8.09164 2.85927 8.09164 3.32622C8.09164 3.79317 7.70784 4.17697 7.24089 4.17697Z" fill="#86694F"/>
+                                            <path d="M0 0V24H24V0H0ZM23.3603 23.3603H0.639659V6.24307H23.3603V23.3603ZM23.3603 5.60341H0.639659V0.639659H23.3603V5.60341Z" fill="#86694F"/>
+                                            <path d="M11.9999 8.46906C8.48813 8.46906 5.63525 11.3219 5.63525 14.8401C5.63525 18.3582 8.48813 21.2047 11.9999 21.2047C15.5116 21.2047 18.3709 18.3518 18.3709 14.8401C18.3709 11.3283 15.5116 8.46906 11.9999 8.46906ZM11.9999 20.565C8.84634 20.565 6.27491 17.9936 6.27491 14.8401C6.27491 11.6865 8.84634 9.10871 11.9999 9.10871C15.1534 9.10871 17.7312 11.6801 17.7312 14.8401C17.7312 18 15.1598 20.565 11.9999 20.565Z" fill="#86694F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_100_19">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>                                        
+                                    </figure>
+                                </div>
+                                <div class="flex flex-col gap-6">
+                                    <p class="text-dark-beige">Hiss</p>
+                                    <p class="text-dark-beige">Balkong</p>
+                                    <p class="text-dark-beige">Tvättmaskin</p>
+                                </div>
+                            </div>
+    
+                            <div class="flex gap-6 items-center">
+                                <div class="flex flex-col gap-6">
+                                    <!-- Dishwasher -->
+                                    <figure>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_100_26)">
+                                            <path d="M0 0V24H24V0H0ZM23.351 23.351H0.648989V6.5277H4.63744C4.65634 6.81124 4.73825 7.18929 5.02809 7.55474C5.55106 8.20373 6.5151 8.53767 7.90129 8.55028C9.01654 8.56288 10.3082 8.56288 11.5432 8.56288C13.9879 8.56288 16.1806 8.55028 16.2121 8.55028C17.1951 8.55028 19.0286 8.12182 19.3311 6.5655H23.3573V23.3573L23.351 23.351ZM5.28013 6.534L18.6569 6.5592C18.2788 7.86978 16.294 7.90129 16.2058 7.90129C16.1554 7.90129 11.2155 7.92649 7.90129 7.90129C6.74193 7.88868 5.92281 7.63665 5.53216 7.15778C5.35574 6.93725 5.29273 6.71042 5.27383 6.5403L5.28013 6.534ZM23.351 5.92281L0.642688 5.87871V0.648989H23.351V5.92281Z" fill="#86694F"/>
+                                            <path d="M3.23882 1.82092C2.4071 1.82092 1.73291 2.49512 1.73291 3.32683C1.73291 4.15854 2.4071 4.83274 3.23882 4.83274C4.07053 4.83274 4.74472 4.15854 4.74472 3.32683C4.74472 2.49512 4.07053 1.82092 3.23882 1.82092ZM3.23882 4.18375C2.76625 4.18375 2.3756 3.79939 2.3756 3.32053C2.3756 2.84166 2.75995 2.45731 3.23882 2.45731C3.71768 2.45731 4.10204 2.84166 4.10204 3.32053C4.10204 3.79939 3.71768 4.18375 3.23882 4.18375Z" fill="#86694F"/>
+                                            <path d="M7.12016 1.82092C6.28845 1.82092 5.61426 2.49512 5.61426 3.32683C5.61426 4.15854 6.28845 4.83274 7.12016 4.83274C7.95188 4.83274 8.62607 4.15854 8.62607 3.32683C8.62607 2.49512 7.95188 1.82092 7.12016 1.82092ZM7.12016 4.18375C6.6476 4.18375 6.25695 3.79939 6.25695 3.32053C6.25695 2.84166 6.6413 2.45731 7.12016 2.45731C7.59903 2.45731 7.98338 2.84166 7.98338 3.32053C7.98338 3.79939 7.59273 4.18375 7.12016 4.18375Z" fill="#86694F"/>
+                                            <path d="M10.8121 1.82092C9.98034 1.82092 9.30615 2.49512 9.30615 3.32683C9.30615 4.15854 9.98034 4.83274 10.8121 4.83274C11.6438 4.83274 12.318 4.15854 12.318 3.32683C12.318 2.49512 11.6438 1.82092 10.8121 1.82092ZM10.8121 4.18375C10.3395 4.18375 9.94884 3.79939 9.94884 3.32053C9.94884 2.84166 10.3332 2.45731 10.8121 2.45731C11.2909 2.45731 11.6753 2.84166 11.6753 3.32053C11.6753 3.79939 11.2909 4.18375 10.8121 4.18375Z" fill="#86694F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_100_26">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
                                         </svg>
-                                </figure>
-                                <!-- Laundry Machine -->
-                                <figure>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_100_19)">
-                                        <path d="M3.4157 1.83582C2.59054 1.83582 1.92529 2.50746 1.92529 3.32622C1.92529 4.14498 2.59693 4.81663 3.4157 4.81663C4.23446 4.81663 4.9061 4.14498 4.9061 3.32622C4.9061 2.50746 4.24086 1.83582 3.4157 1.83582ZM3.4157 4.17697C2.94235 4.17697 2.56495 3.79317 2.56495 3.32622C2.56495 2.85927 2.94875 2.47547 3.4157 2.47547C3.88265 2.47547 4.26644 2.85927 4.26644 3.32622C4.26644 3.79317 3.88265 4.17697 3.4157 4.17697Z" fill="#86694F"/>
-                                        <path d="M7.24089 1.83582C6.41573 1.83582 5.75049 2.50746 5.75049 3.32622C5.75049 4.14498 6.41573 4.81663 7.24089 4.81663C8.06605 4.81663 8.7313 4.14498 8.7313 3.32622C8.7313 2.50746 8.05966 1.83582 7.24089 1.83582ZM7.24089 4.17697C6.77394 4.17697 6.39015 3.79317 6.39015 3.32622C6.39015 2.85927 6.77394 2.47547 7.24089 2.47547C7.70784 2.47547 8.09164 2.85927 8.09164 3.32622C8.09164 3.79317 7.70784 4.17697 7.24089 4.17697Z" fill="#86694F"/>
-                                        <path d="M0 0V24H24V0H0ZM23.3603 23.3603H0.639659V6.24307H23.3603V23.3603ZM23.3603 5.60341H0.639659V0.639659H23.3603V5.60341Z" fill="#86694F"/>
-                                        <path d="M11.9999 8.46906C8.48813 8.46906 5.63525 11.3219 5.63525 14.8401C5.63525 18.3582 8.48813 21.2047 11.9999 21.2047C15.5116 21.2047 18.3709 18.3518 18.3709 14.8401C18.3709 11.3283 15.5116 8.46906 11.9999 8.46906ZM11.9999 20.565C8.84634 20.565 6.27491 17.9936 6.27491 14.8401C6.27491 11.6865 8.84634 9.10871 11.9999 9.10871C15.1534 9.10871 17.7312 11.6801 17.7312 14.8401C17.7312 18 15.1598 20.565 11.9999 20.565Z" fill="#86694F"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_100_19">
-                                        <rect width="24" height="24" fill="white"/>
-                                        </clipPath>
-                                        </defs>
+                                    </figure>
+                                    <!-- Storage -->
+                                    <figure>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_100_33)">
+                                            <path d="M0 0V4.27195H2.92558V24H21.0808V4.27195H24V0H0ZM20.4407 23.3576H3.56575V4.27195H20.4407V23.3576ZM23.3598 3.62955H0.640171V0.642398H23.3598V3.62955Z" fill="#86694F"/>
+                                            <path d="M6.33789 6.09637V8.83299H18.0146V6.09637H6.33789ZM17.3296 8.19059H7.02927V6.73877H17.3232V8.19059H17.3296Z" fill="#86694F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_100_33">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
                                         </svg>                                        
-                                </figure>
-                            </div>
-                            <div>
-                                <p class="text-dark-beige">Hiss</p>
-                                <p class="text-dark-beige">Balkong</p>
-                                <p class="text-dark-beige">Tvättmaskin</p>
+                                    </figure>
+                                    <!-- TV -->
+                                    <figure>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_100_37)">
+                                            <path d="M24 24H0V5.79425H24V23.9933V24ZM0.647566 23.351H23.3524V6.44326H0.647566V23.351Z" fill="#86694F"/>
+                                            <path d="M18.3521 21.0293H3.31787V8.76501H18.3521V21.0293ZM3.96544 20.3803H17.7045V9.41402H3.96544V20.3803Z" fill="#86694F"/>
+                                            <path d="M20.996 11.3744C20.2416 11.3744 19.6274 10.7588 19.6274 10.0028C19.6274 9.24672 20.2416 8.63116 20.996 8.63116C21.7504 8.63116 22.3646 9.24672 22.3646 10.0028C22.3646 10.7588 21.7504 11.3744 20.996 11.3744ZM20.996 9.27348C20.5955 9.27348 20.275 9.60133 20.275 9.99609C20.275 10.3909 20.6021 10.7187 20.996 10.7187C21.3899 10.7187 21.717 10.3909 21.717 9.99609C21.717 9.60133 21.3899 9.27348 20.996 9.27348Z" fill="#86694F"/>
+                                            <path d="M20.996 15.2216C20.2416 15.2216 19.6274 14.6061 19.6274 13.85C19.6274 13.094 20.2416 12.4784 20.996 12.4784C21.7504 12.4784 22.3646 13.094 22.3646 13.85C22.3646 14.6061 21.7504 15.2216 20.996 15.2216ZM20.996 13.1207C20.5955 13.1207 20.275 13.4486 20.275 13.8433C20.275 14.2381 20.6021 14.5659 20.996 14.5659C21.3899 14.5659 21.717 14.2381 21.717 13.8433C21.717 13.4486 21.3899 13.1207 20.996 13.1207Z" fill="#86694F"/>
+                                            <path d="M6.47707 1.18517e-05L6.01416 0.453857L11.7656 6.34635L12.2285 5.8925L6.47707 1.18517e-05Z" fill="#86694F"/>
+                                            <path d="M17.5195 0.00600981L11.7681 5.8985L12.231 6.35234L17.9825 0.459856L17.5195 0.00600981Z" fill="#86694F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_100_37">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                    </figure>
+                                </div>
+                                <div class="flex flex-col gap-6">
+                                    <p class="text-dark-beige">Diskmaskin</p>
+                                    <p class="text-dark-beige">Förråd</p>
+                                    <p class="text-dark-beige">Kabel-TV</p>
+                                </div>
                             </div>
                         </div>
-                        
+                        <p class="text-dark-beige italic mt-4">Internet, varmvatten och el ingår inte i hyran</p>
                     </div>
                 </div>
 
@@ -226,7 +323,7 @@
                 <div class="max-w-[670px] flex flex-col">
                     <!-- Footer Logo -->
                     <div>
-                      <a href="">
+                      <a href="/src/index.html">
                         <img class="w-[195px] pl-16 sm:pl-0" src="assets/icons/logo.svg" alt="Hjärterum logo">
                       </a>
                     </div>

@@ -633,6 +633,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -704,6 +708,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -718,6 +726,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -740,6 +752,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 0.875rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-52 {
   height: 13rem;
 }
@@ -756,12 +772,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 250px;
 }
 
-.h-\[444px\] {
-  height: 444px;
+.h-\[340px\] {
+  height: 340px;
 }
 
-.h-\[508px\] {
-  height: 508px;
+.h-\[444px\] {
+  height: 444px;
 }
 
 .min-h-28 {
@@ -774,6 +790,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .w-3\.5 {
   width: 0.875rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-8 {
@@ -792,8 +812,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 225px;
 }
 
-.w-\[746px\] {
-  width: 746px;
+.w-\[308px\] {
+  width: 308px;
 }
 
 .w-\[892px\] {
@@ -804,8 +824,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
 .max-w-36 {
   max-width: 9rem;
+}
+
+.max-w-40 {
+  max-width: 10rem;
 }
 
 .max-w-44 {
@@ -820,16 +852,24 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 13rem;
 }
 
+.max-w-\[1140px\] {
+  max-width: 1140px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
+}
+
+.max-w-\[330px\] {
+  max-width: 330px;
+}
+
 .max-w-\[344px\] {
   max-width: 344px;
 }
 
 .max-w-\[670px\] {
   max-width: 670px;
-}
-
-.max-w-\[704px\] {
-  max-width: 704px;
 }
 
 .-translate-y-full {
@@ -908,6 +948,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-x-0 {
@@ -1001,6 +1045,30 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('/src/assets/images/bathroom-3.jpg');
 }
 
+.bg-\[url\(\'\/src\/assets\/images\/bathroom-4\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bathroom-4.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bathroom-5\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bathroom-5.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bathroom-6\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bathroom-6.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bathroom-7\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bathroom-7.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bathroom-8\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bathroom-8.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bathroom-9\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bathroom-9.jpg');
+}
+
 .bg-\[url\(\'\/src\/assets\/images\/bathroom\.jpg\'\)\] {
   background-image: url('/src/assets/images/bathroom.jpg');
 }
@@ -1011,6 +1079,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-\[url\(\'\/src\/assets\/images\/bedroom-3\.jpg\'\)\] {
   background-image: url('/src/assets/images/bedroom-3.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bedroom-4\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bedroom-4.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bedroom-5\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bedroom-5.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bedroom-6\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bedroom-6.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bedroom-7\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bedroom-7.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bedroom-8\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bedroom-8.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/bedroom-9\.jpg\'\)\] {
+  background-image: url('/src/assets/images/bedroom-9.jpg');
 }
 
 .bg-\[url\(\'\/src\/assets\/images\/bedroom\.jpg\'\)\] {
@@ -1033,12 +1125,32 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('/src/assets/images/kitchen-3.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/images\/kitchen\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen.jpg');
+.bg-\[url\(\'\/src\/assets\/images\/kitchen-4\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen-4.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/images\/livingroom-2\.jpg\'\)\] {
-  background-image: url('/src/assets/images/livingroom-2.jpg');
+.bg-\[url\(\'\/src\/assets\/images\/kitchen-5\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen-5.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/kitchen-6\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen-6.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/kitchen-7\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen-7.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/kitchen-8\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen-8.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/kitchen-9\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen-9.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/kitchen\.jpg\'\)\] {
+  background-image: url('/src/assets/images/kitchen.jpg');
 }
 
 .bg-\[url\(\'\/src\/assets\/images\/map\.png\'\)\] {
@@ -1049,84 +1161,12 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('/src/assets/images/news-1.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/images\/solar-panels\.jpg\'\)\] {
-  background-image: url('/src/assets/images/solar-panels.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-4\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-4.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-4\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-4.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-4\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-4.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-8\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-8.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-8\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-8.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-8\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-8.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-9.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-9.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-9.jpg');
-}
-
 .bg-\[url\(\'\/src\/assets\/images\/planritning\.jpg\'\)\] {
   background-image: url('/src/assets/images/planritning.jpg');
+}
+
+.bg-\[url\(\'\/src\/assets\/images\/solar-panels\.jpg\'\)\] {
+  background-image: url('/src/assets/images/solar-panels.jpg');
 }
 
 .bg-cover {
@@ -1204,8 +1244,16 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 5rem;
 }
 
+.pt-28 {
+  padding-top: 7rem;
+}
+
 .pt-36 {
   padding-top: 9rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -1221,9 +1269,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -1258,6 +1316,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
@@ -1270,6 +1336,11 @@ h1, h2, h3, h4, h5, h6 {
 .text-dark-pink {
   --tw-text-opacity: 1;
   color: rgb(255 181 167 / var(--tw-text-opacity));
+}
+
+.text-lighter-beige {
+  --tw-text-opacity: 1;
+  color: rgb(173 161 152 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1321,8 +1392,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 640px) {
-  .sm\:left-10 {
-    left: 2.5rem;
+  .sm\:left-4 {
+    left: 1rem;
+  }
+
+  .sm\:ml-4 {
+    margin-left: 1rem;
   }
 
   .sm\:block {
@@ -1337,12 +1412,32 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
+  .sm\:h-72 {
+    height: 18rem;
+  }
+
+  .sm\:h-\[508px\] {
+    height: 508px;
+  }
+
+  .sm\:w-80 {
+    width: 20rem;
+  }
+
   .sm\:w-\[300px\] {
     width: 300px;
   }
 
-  .sm\:max-w-\[250px\] {
-    max-width: 250px;
+  .sm\:w-\[544px\] {
+    width: 544px;
+  }
+
+  .sm\:max-w-52 {
+    max-width: 13rem;
+  }
+
+  .sm\:max-w-\[363px\] {
+    max-width: 363px;
   }
 
   .sm\:max-w-\[576px\] {
@@ -1365,8 +1460,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
   }
 
-  .sm\:gap-10 {
-    gap: 2.5rem;
+  .sm\:gap-4 {
+    gap: 1rem;
   }
 
   .sm\:px-4 {
@@ -1378,12 +1473,30 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 0px;
   }
 
-  .sm\:pl-4 {
-    padding-left: 1rem;
+  .sm\:pt-36 {
+    padding-top: 9rem;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-\[300px\] {
     height: 300px;
   }
@@ -1406,6 +1519,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:px-\[100px\] {
@@ -1441,10 +1558,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 7rem;
   }
 
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
   .lg\:ml-4 {
     margin-left: 1rem;
   }
@@ -1461,12 +1574,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 440px;
   }
 
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
-  .lg\:w-\[600px\] {
-    width: 600px;
+  .lg\:w-\[550px\] {
+    width: 550px;
   }
 
   .lg\:max-w-\[440px\] {
@@ -1477,8 +1586,16 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 960px;
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:gap-x-1 {
@@ -1517,12 +1634,24 @@ h1, h2, h3, h4, h5, h6 {
     top: 8rem;
   }
 
+  .xl\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .xl\:mt-32 {
     margin-top: 8rem;
   }
 
   .xl\:h-\[540px\] {
     height: 540px;
+  }
+
+  .xl\:h-screen {
+    height: 100vh;
+  }
+
+  .xl\:w-\[590px\] {
+    width: 590px;
   }
 
   .xl\:w-\[730px\] {
@@ -1535,6 +1664,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .xl\:max-w-\[490px\] {
     max-width: 490px;
+  }
+
+  .xl\:max-w-\[590px\] {
+    max-width: 590px;
   }
 
   .xl\:gap-x-10 {
@@ -1567,6 +1700,14 @@ h1, h2, h3, h4, h5, h6 {
     top: 13rem;
   }
 
+  .\32xl\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .\32xl\:w-\[746px\] {
+    width: 746px;
+  }
+
   .\32xl\:w-\[890px\] {
     width: 890px;
   }
@@ -1577,6 +1718,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .\32xl\:max-w-\[1440px\] {
     max-width: 1440px;
+  }
+
+  .\32xl\:max-w-\[704px\] {
+    max-width: 704px;
   }
 
   .\32xl\:px-64 {

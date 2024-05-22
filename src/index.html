@@ -18,7 +18,7 @@
         <header class="h-20 w-full fixed flex items-center z-50 bg-whiteish px-8 2xl:px-64">
             <div class="w-full flex items-end lg:items-center justify-between">
                 <!-- Logo -->
-                <a href="">
+                <a href="/src/index.html">
                     <img class="w-[195px]" src="assets/icons/logo.svg" alt="Hjärterum logo">
                 </a>
 
@@ -54,13 +54,13 @@
         </header>
 
         <!-- Responsive Menu -->
-        <nav class="responsive-menu w-full fixed z-40">
+        <nav class="responsive-menu w-full fixed z-40 invisible">
 
             <!-- Menu -->
-            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500'  : 'translate-y-0 transition-all duration-500'"  class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 min-h-28 top-20 pb-8">
+            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500 invisible'  : 'translate-y-0 transition-all duration-500 visible'" class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 mt-20 min-h-28 top-20 pt-4 pb-8">
                 <ul class="flex flex-col gap-4">
-                    <li class="font-bold text-dark-pink"><a href="index.html">Startsida</a></li>
-                    <li><a href="/housing.html">Bostäder</a></li>
+                    <li class="font-bold text-dark-pink"><a href="/src/index.html">Startsida</a></li>
+                    <li><a href="/src/housing.html">Bostäder</a></li>
                     <li><a href="">Våra områden</a></li>
                     <li><a href="">Mina sidor</a></li>
                     <li><a href="">Om oss</a></li>
@@ -77,40 +77,45 @@
         </nav>
 
         <!-- Hero -->
-        <section class="pt-20 mb-32 lg:mb-0 lg:h-screen lg:max-w[1216px] 2xl:max-w-[1440px] mx-auto">
+        <section class="pt-20 mb-32 lg:max-w[1216px] xl:h-screen xl:mb-0 2xl:max-w-[1440px] mx-auto">
             <div class="flex justify-between items-center">
                 <div>
                      <!-- Hero Background Icon -->
                      <figure class="">
-                        <img class="absolute top-24 left-6 sm:left-10 lg:top-28 lg:left-4 xl:top-32 2xl:top-52 2xl:left-60 h-[250px] md:h-[300px] lg:h-[440px] xl:h-[540px] opacity-20" src="assets/icons/background-icon-2.svg" alt="Hjärterum icon">
+                        <img class="absolute top-24 left-6 sm:left-4 lg:top-28 lg:left-4 xl:top-32 2xl:top-52 2xl:left-60 h-[250px] md:h-[300px] lg:h-[440px] xl:h-[540px] opacity-20" src="assets/icons/background-icon-2.svg" alt="Hjärterum icon">
                     </figure>
                     <!-- Hero Content -->
-                    <div class="flex flex-col mt-14 sm:justify-center ml-8 lg:ml-4 sm:pl-4">
-                        <h1 class="text-dark-pink text-4xl md:text-5xl lg:text-6xl xl:text-7xl sm:max-w-[250px] md:max-w-[340px] lg:max-w-[440px] xl:max-w-[490px]">Välkommen till <span class="text-dark-beige">Hjärterum</span>!</h1>
-                        <p class="text-xl lg:text-2xl pt-2 pb-4 md:pt-4 md:pb-6 text-dark-beige">Hitta ditt nya hem hos oss</p>
-                        <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-44 z-30 hover:bg-transparent hover:text-dark-beige" href="housing.html">Lediga bostäder</a>
+                    <div class="flex flex-col mt-14 sm:justify-center ml-8 sm:ml-4 lg:ml-4 2xl:ml-4">
+                        <h1 class="text-dark-pink text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-[250px] md:max-w-[340px] lg:max-w-[440px] xl:max-w-[490px] z-30">Välkommen till <span class="text-dark-beige">Hjärterum</span>!</h1>
+                        <p class="text-xl lg:text-2xl pt-2 pb-4 md:pt-4 md:pb-6 text-dark-beige z-30">Hitta ditt nya hem hos oss</p>
+                        <a class="flex justify-center uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 w-44 z-20 hover:bg-transparent hover:text-dark-beige" href="housing.html">Lediga bostäder</a>
                     </div>
                 </div>
                     <!-- Hero Image -->
                     <figure>
-                        <img class="hidden sm:block sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[730px] 2xl:w-[890px]" src="assets/images/hero-copy.jpg" alt="Mother holding a child against her hip with cherrytree branches in the foreground">
+                        <img class="hidden sm:block sm:w-[300px] md:w-[380px] lg:w-[550px] xl:w-[730px] 2xl:w-[890px]" src="assets/images/hero-copy.jpg" alt="Mother holding a child against her hip with cherrytree branches in the foreground">
                     </figure>
             </div>
         </section>
 
         <!-- Housing -->
         <section class="bg-whiteish-opacity-50 mt-0 xl:mt-32 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto px-0">
-            <div class="py-8 lg:py-14 px-4 lg:px-16 xl:px-28">
+            <div class="py-8 px-4 lg:py-14 lg:px-16 xl:px-28">
                 <!-- Housing Header -->
                 <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Ledigt just nu</h2>
-                    <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-52 z-10 hover:bg-transparent hover:text-dark-beige" href="/src/housing.html">Alla lediga bostäder</a>
+                    <a class="hidden sm:block uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-52 z-10 hover:bg-transparent hover:text-dark-beige" href="/src/housing.html">Alla lediga bostäder</a>
+                    <a class="sm:hidden uppercase text-lighter-beige tracking-wide font-lato font-bold text-base flex gap-0.5" href="/src/apartment.html">Alla lediga bostäder
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>  
+                    </a>
                 </header>
                 <!-- Housing Cards -->
                 <div class="mt-8 flex flex-col items-center md:justify-between md:flex-row flex-wrap lg:gap-x-1 gap-y-10 pb-16">
                     <!-- Card 1 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/10.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/10.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Vasastan</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Vikingagatan 37</h3>
                         <p class="text-lg text-dark-beige mb-3">10 450 kr / månad</p>
@@ -126,7 +131,7 @@
                                 <p class="text-sm text-dark-beige">1 juli, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -134,9 +139,9 @@
                     </div>
                     <!-- Card 2 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/2.jpg')] w-80 h-52 bg-cover bg-bottom mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/2.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-bottom mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Vasastan</p>
-                        <h3 class="text-2xl text-dark-pink mb-2">Odenagatan 45</h3>
+                        <h3 class="text-2xl text-dark-pink mb-2">Odengatan 45</h3>
                         <p class="text-lg text-dark-beige mb-3">15 670 kr / månad</p>
                         <div class="flex gap-4 pb-4">
                             <div>
@@ -150,7 +155,7 @@
                                 <p class="text-sm text-dark-beige">1 september, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -158,7 +163,7 @@
                     </div>
                     <!-- Card 3 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/5.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/5.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Lidingö</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Lokevägen 12</h3>
                         <p class="text-lg text-dark-beige mb-3">8 600 kr / månad</p>
@@ -174,7 +179,7 @@
                                 <p class="text-sm text-dark-beige">1 augusti, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -182,7 +187,7 @@
                     </div>
                     <!-- Card 4 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/6.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/6.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Bromma</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Rökstensvägen 8</h3>
                         <p class="text-lg text-dark-beige mb-3">7 850 kr / månad</p>
@@ -198,7 +203,7 @@
                                 <p class="text-sm text-dark-beige">1 oktober, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -206,7 +211,7 @@
                     </div>
                     <!-- Card 5 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/7.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/7.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Södermalm</p>
                         <h3 class="text-2xl text-dark-pink mb-2">Krukmakargatan 5</h3>
                         <p class="text-lg text-dark-beige mb-3">12 450 kr / månad</p>
@@ -222,7 +227,7 @@
                                 <p class="text-sm text-dark-beige">1 april, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -230,9 +235,9 @@
                     </div>
                     <!-- Card 6 -->
                     <div>
-                        <figure class="bg-[url('/src/assets/images/12.jpeg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                        <figure class="bg-[url('/src/assets/images/12.jpeg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <p class="text-sm text-dark-beige mb-3">Stockholm - Solna</p>
-                        <h3 class="text-2xl text-dark-pink mb-2">Nybodagatan 16</h3>
+                        <h3 class="text-2xl text-dark-pink mb-2">Nybodagatan 7</h3>
                         <p class="text-lg text-dark-beige mb-3">13 250 kr / månad</p>
                         <div class="flex gap-4 pb-4">
                             <div>
@@ -246,7 +251,7 @@
                                 <p class="text-sm text-dark-beige">1 maj, 2024</p>
                             </div>
                         </div>
-                        <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">mer information 
+                        <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="/src/apartment.html">mer information 
                             <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>                              
@@ -265,17 +270,22 @@
                 <!-- News Header -->
                 <header class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark-pink">Nyheter</h2>
-                    <a class="uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-36 z-10 hover:bg-transparent hover:text-dark-beige" href="">Alla nyheter</a>
+                    <a class="hidden sm:block uppercase tracking-wider bg-lighter-beige text-white font-lato font-bold border-lighter-beige border-2 text-xs py-3 px-5 max-w-36 z-10 hover:bg-transparent hover:text-dark-beige" href="">Alla nyheter</a>
+                    <a class="sm:hidden uppercase text-lighter-beige tracking-wide font-lato font-bold text-base flex gap-0.5" href="/src/apartment.html">Alla nyheter
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>  
+                    </a>
                 </header>
                 <!-- News Cards -->
                 <div class="flex flex-wrap justify-between gap-x-0 xl:gap-x-10 gap-y-14 mt-8">
                     <!-- Card 1 -->
-                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
-                        <figure class="bg-[url('/src/assets/images/news-1.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-4 md:gap-10">
+                        <figure class="bg-[url('/src/assets/images/news-1.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">23 Februari, 2024</p>
                             <h3 class="text-2xl text-dark-beige max-w-48 mb-4">Sök sommarjobb hos Hjärterum</h3>
-                            <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">läs mer
+                            <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="">läs mer
                                 <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>                              
@@ -283,12 +293,12 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
-                        <figure class="bg-[url('/src/assets/images/key.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-4 md:gap-10">
+                        <figure class="bg-[url('/src/assets/images/key.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">15 Mars, 2024</p>
                             <h3 class="text-2xl text-dark-beige max-w-48 mb-4">Samarbete med Stockholms stads bostadsförmedling</h3>
-                            <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">läs mer 
+                            <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="">läs mer 
                                 <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>                              
@@ -296,12 +306,12 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
-                        <figure class="bg-[url('/src/assets/images/solar-panels.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-4 md:gap-10">
+                        <figure class="bg-[url('/src/assets/images/solar-panels.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">24 Mars, 2024</p>
                             <h3 class="text-2xl text-dark-beige max-w-48 mb-4">Nu installerar vi solceller på alla våra fastigheter</h3>
-                            <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">läs mer 
+                            <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="">läs mer 
                                 <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>                              
@@ -309,12 +319,12 @@
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
-                        <figure class="bg-[url('/src/assets/images/electric-car.jpg')] w-80 h-52 bg-cover bg-center mb-3"></figure>
+                    <div class="flex flex-col gap-4 sm:flex-row sm:gap-4 md:gap-10">
+                        <figure class="bg-[url('/src/assets/images/electric-car.jpg')] w-[308px] sm:w-80 h-52 bg-cover bg-center mb-3"></figure>
                         <div>
                             <p class="text-sm text-dark-beige mb-3">7 April, 2024</p>
                             <h3 class="text-2xl text-dark-beige max-w-48 mb-4">Nu kör alla våra vaktmästare med 100% el</h3>
-                            <a class="uppercase text-dark-pink font-bold text-xs flex gap-0.5 group" href="">läs mer 
+                            <a class="uppercase text-dark-pink font-bold text-xs tracking-wider flex gap-0.5 group" href="">läs mer 
                                 <svg class="group-hover:translate-x-0.5 w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>                              
@@ -334,7 +344,7 @@
                 <div class="max-w-[670px] flex flex-col">
                     <!-- Footer Logo -->
                     <div>
-                      <a href="">
+                      <a href="/src/index.html">
                         <img class="w-[195px] pl-16 sm:pl-0" src="assets/icons/logo.svg" alt="Hjärterum logo">
                       </a>
                     </div>
