@@ -4,4 +4,4 @@ This project was made as a challenge to use a design and colors I usually won’
 
 HTML and Tailwind CSS was used for this project, and also JavaScript for the responsive menu. 
 
-To view this page, [click here](https://zeebracorn.github.io/hjarterum/)
+To view this page, [click here](https://zeebracorn.github.io/hjarterum/src)
