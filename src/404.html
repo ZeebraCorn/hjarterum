@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjärterum</title>
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="./output.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div x-data="{ open: false }">
+        <!-- Header -->
+        <header class="h-20 w-full fixed flex items-center z-50 bg-whiteish px-8 2xl:px-64">
+            <div class="w-full flex items-end lg:items-center justify-between">
+                <!-- Logo -->
+                <a href="/src/index.html">
+                    <img class="w-[195px]" src="assets/icons/logo.svg" alt="Hjärterum logo">
+                </a>
+
+                <!-- Responsive Menu Buttons -->
+                <div>
+                       <!-- Menu button -->
+                    <button @click="open = true" x-show="!open" class="menu-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>  
+                    </button>
+
+                     <!-- Close Button -->
+                    <button @click="open = false" x-show="open" class="close-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#86694F" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>                  
+                    </button>
+                </div>
+
+                <!-- Menu -->
+                <nav class="lg:flex cursor-pointer hidden">
+                    <ul class="flex gap-8 text-lg text-dark-beige">
+                        <li class="font-bold"><a href="/src/index.html">Startsida</a></li>
+                        <li class="hover:font-bold"><a href="/src/housing.html">Bostäder</a></li>
+                        <li class="hover:font-bold"><a href="">Våra områden</a></li>
+                        <li class="hover:font-bold"><a href="">Mina sidor</a></li>
+                        <li class="hover:font-bold"><a href="">Om oss</a></li>
+                        <li class="hover:font-bold"><a href="">Kontakta oss</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Responsive Menu -->
+        <nav class="responsive-menu w-full fixed z-40 invisible">
+
+            <!-- Menu -->
+            <nav x-bind:class="! open ? '-translate-y-full transition-all duration-500 invisible'  : 'translate-y-0 transition-all duration-500 visible'" class="-translate-y-full bg-whiteish text-dark-beige text-2xl text-center flex justify-center my-8 mt-20 min-h-28 top-20 pt-4 pb-8">
+                <ul class="flex flex-col gap-4">
+                    <li class="font-bold text-dark-pink"><a href="/src/index.html">Startsida</a></li>
+                    <li><a href="/src/housing.html">Bostäder</a></li>
+                    <li><a href="">Våra områden</a></li>
+                    <li><a href="">Mina sidor</a></li>
+                    <li><a href="">Om oss</a></li>
+                    <li><a href="">Kontakta oss</a></li>
+                    <li><a href="">Felanmälan</a></li>
+                    <nav>
+                        <ul class="text-dark-pink flex gap-4 mt-4">
+                            <li><a href="">facebook</a></li>
+                            <li><a href="">instagram</a></li>
+                        </ul>
+                    </nav>
+                </ul>
+            </nav>
+        </nav>
+
+        <!-- 404 -->
+         <div class="pt-36">
+            <section class="bg-whiteish-opacity-50 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto px-0">
+                <div class="py-8 lg:py-14 px-4 lg:px-16 xl:px-28">
+                    <div>
+                        <p class="text-dark-beige text-sm">404</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+     
+
+      
+
+        <!-- Section Line -->
+        <div class="border-2 border-dark-pink max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] my-16 mx-auto"></div>
+
+        <!-- Footer -->
+        <footer class="bg-lighter-beige sm:px-4 max-w-[344px] sm:max-w-[576px] md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1216px] 2xl:max-w-[1376px] mx-auto mb-14">
+            <div class="py-8 md:py-14 md:px-[100px] lg:px-[200px] xl:px-[350px]">
+                <div class="max-w-[670px] flex flex-col">
+                    <!-- Footer Logo -->
+                    <div>
+                      <a href="/src/index.html">
+                        <img class="w-[195px] pl-16 sm:pl-0" src="assets/icons/logo.svg" alt="Hjärterum logo">
+                      </a>
+                    </div>
+                    <div class="hidden sm:flex justify-between mt-3">
+                        <!-- Footer Adress -->
+                        <div>
+                            <p class="text-white">Amors väg 32</p>
+                            <p class="text-white">123 45 Stockholm</p>
+                            <p class="text-white">info@hjarterum.se</p>
+                            <p class="text-white">08 - 12 34 56</p>
+                        </div>
+                        <!-- Footer Menu -->
+                        <div>
+                            <ul class="text-white flex flex-col gap-4">
+                                <li><a href="">Felanmälan</a></li>
+                                <li><a href="">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Socials -->
+                        <div>
+                            <ul class="text-dark-pink flex flex-col gap-4">
+                                <li><a href="">facebook</a></li>
+                                <li><a href="">instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hidden sm:flex justify-between items-end mt-4">
+                        <!-- Opening Hours -->
+                        <div>
+                            <p class="text-dark-pink">Öppettider:</p>
+                            <p class="text-white">Måndag-fredag 08:00-16:30</p>
+                        </div>
+                        <!-- Cookies & Integritypolicy -->
+                        <div>
+                            <ul class="text-sm text-white flex gap-12">
+                                <li><a href="">Cookies</a></li>
+                                <li><a href="">Integritetspolicy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Footer Responsive -->
+                    <div class="flex flex-col gap-4 pl-16 mt-4 mb-10 sm:hidden">
+                        <!-- Adress -->
+                        <div>
+                            <p class="text-white">Amors väg 32</p>
+                            <p class="text-white">123 45 Stockholm</p>
+                            <p class="text-white">info@hjarterum.se</p>
+                            <p class="text-white">08 - 12 34 5
+                        </div>
+                        <!-- Opening Hours -->
+                        <div>
+                            <p class="text-dark-pink">Öppettider:</p>
+                            <p class="text-white">Måndag-fredag 08:00-16:30</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-16 pl-16 mb-8 sm:hidden">
+                        <!-- Footer Menu -->
+                        <div>
+                            <ul class="text-white flex flex-col gap-3">
+                                <li><a href="">Felanmälan</a></li>
+                                <li><a href="">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Socials -->
+                        <div>
+                            <ul class="text-dark-pink flex flex-col gap-3">
+                                <li><a href="">facebook</a></li>
+                                <li><a href="">instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Cookies & Integritypolicy -->
+                     <div>
+                        <ul class="text-sm text-white flex gap-20 pl-16 sm:hidden">
+                            <li><a href="">Cookies</a></li>
+                            <li><a href="">Integritetspolicy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+</body>
+</html>
