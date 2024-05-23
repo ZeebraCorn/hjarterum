@@ -728,6 +728,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -778,6 +782,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .h-\[444px\] {
   height: 444px;
+}
+
+.h-\[344px\] {
+  height: 344px;
+}
+
+.h-\[484px\] {
+  height: 484px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[396px\] {
+  height: 396px;
 }
 
 .min-h-28 {
@@ -944,6 +964,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .gap-x-0 {
@@ -1248,6 +1272,14 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 1rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-28 {
+  padding-bottom: 7rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1294,6 +1326,11 @@ h1, h2, h3, h4, h5, h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-black {
@@ -1384,16 +1421,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 640px) {
-  .sm\:left-4 {
-    left: 1rem;
-  }
-
   .sm\:left-8 {
     left: 2rem;
-  }
-
-  .sm\:ml-4 {
-    margin-left: 1rem;
   }
 
   .sm\:block {
@@ -1460,6 +1489,26 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
   }
 
+  .sm\:gap-14 {
+    gap: 3.5rem;
+  }
+
+  .sm\:gap-11 {
+    gap: 2.75rem;
+  }
+
+  .sm\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .sm\:gap-9 {
+    gap: 2.25rem;
+  }
+
+  .sm\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1495,6 +1544,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:h-\[300px\] {
     height: 300px;
+  }
+
+  .md\:h-\[344px\] {
+    height: 344px;
+  }
+
+  .md\:h-\[484px\] {
+    height: 484px;
   }
 
   .md\:w-\[380px\] {
@@ -1543,6 +1600,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1552,14 +1614,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .lg\:top-28 {
     top: 7rem;
-  }
-
-  .lg\:ml-4 {
-    margin-left: 1rem;
-  }
-
-  .lg\:ml-8 {
-    margin-left: 2rem;
   }
 
   .lg\:flex {
@@ -1634,18 +1688,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 8rem;
   }
 
-  .xl\:left-6 {
-    left: 1.5rem;
-  }
-
-  .xl\:left-8 {
-    left: 2rem;
-  }
-
-  .xl\:left-4 {
-    left: 1rem;
-  }
-
   .xl\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1710,10 +1752,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .\32xl\:top-52 {
     top: 13rem;
-  }
-
-  .\32xl\:ml-4 {
-    margin-left: 1rem;
   }
 
   .\32xl\:w-\[746px\] {
