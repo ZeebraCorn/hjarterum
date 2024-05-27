@@ -836,6 +836,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.w-\[1440px\] {
+  width: 1440px;
+}
+
 .max-w-36 {
   max-width: 9rem;
 }
@@ -969,6 +973,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .gap-y-14 {
   row-gap: 3.5rem;
+}
+
+.gap-y-0 {
+  row-gap: 0px;
 }
 
 .border-2 {
@@ -1377,6 +1385,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 
+.swiper-pagination-bullet {
+  background-color: #FFB5A7;
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1491,14 +1503,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 2.5rem;
   }
 
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
