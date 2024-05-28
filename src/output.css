@@ -836,10 +836,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.w-\[1440px\] {
-  width: 1440px;
-}
-
 .max-w-36 {
   max-width: 9rem;
 }
@@ -969,14 +965,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .gap-y-10 {
   row-gap: 2.5rem;
-}
-
-.gap-y-14 {
-  row-gap: 3.5rem;
-}
-
-.gap-y-0 {
-  row-gap: 0px;
 }
 
 .border-2 {
@@ -1179,6 +1167,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-\[url\(\'\/src\/assets\/images\/solar-panels\.jpg\'\)\] {
   background-image: url('/src/assets/images/solar-panels.jpg');
+}
+
+.bg-\[url\(\'\/assets\/images\/10\.jpg\'\)\] {
+  background-image: url('/assets/images/10.jpg');
 }
 
 .bg-cover {
