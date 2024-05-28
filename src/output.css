@@ -1177,6 +1177,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('assets/images/10.jpg');
 }
 
+.bg-\[url\(\'\.\/src\/assets\/images\/2\.jpg\'\)\] {
+  background-image: url('./src/assets/images/2.jpg');
+}
+
 .bg-cover {
   background-size: cover;
 }
