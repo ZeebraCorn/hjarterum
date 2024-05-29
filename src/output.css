@@ -1001,10 +1001,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(255 251 250 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/assets\/images\/10\.jpg\'\)\] {
-  background-image: url('/assets/images/10.jpg');
-}
-
 .bg-\[url\(\'\/src\/assets\/images\/10\.jpg\'\)\] {
   background-image: url('/src/assets/images/10.jpg');
 }
@@ -1177,12 +1173,12 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('assets/images/10.jpg');
 }
 
-.bg-\[url\(\'\.\/src\/assets\/images\/2\.jpg\'\)\] {
-  background-image: url('./src/assets/images/2.jpg');
-}
-
 .bg-\[url\(\'hjarterum\/src\/assets\/images\/2\.jpg\'\)\] {
   background-image: url('hjarterum/src/assets/images/2.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/2\.jpg\'\)\] {
+  background-image: url('assets/images/2.jpg');
 }
 
 .bg-cover {
