@@ -1333,6 +1333,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('assets/images/kitchen-9.jpg');
 }
 
+.bg-\[url\(\'assets\/images\/planritning\.jpg\'\)\] {
+  background-image: url('assets/images/planritning.jpg');
+}
+
 .bg-cover {
   background-size: cover;
 }
