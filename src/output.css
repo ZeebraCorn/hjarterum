@@ -1001,188 +1001,24 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(255 251 250 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/src\/assets\/images\/10\.jpg\'\)\] {
-  background-image: url('/src/assets/images/10.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/11\.jpeg\'\)\] {
-  background-image: url('/src/assets/images/11.jpeg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/12\.jpeg\'\)\] {
-  background-image: url('/src/assets/images/12.jpeg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/13\.jpeg\'\)\] {
-  background-image: url('/src/assets/images/13.jpeg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/2\.jpg\'\)\] {
-  background-image: url('/src/assets/images/2.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/9.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-2\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-2.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-3\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-3.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-4\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-4.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-8\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-8.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom-9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom-9.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bathroom\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bathroom.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-2\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-2.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-3\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-3.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-4\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-4.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-8\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-8.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom-9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom-9.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/bedroom\.jpg\'\)\] {
-  background-image: url('/src/assets/images/bedroom.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/electric-car\.jpg\'\)\] {
-  background-image: url('/src/assets/images/electric-car.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/key\.jpg\'\)\] {
-  background-image: url('/src/assets/images/key.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-2\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-2.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-3\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-3.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-4\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-4.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-5\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-5.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-6\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-6.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-7\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-7.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-8\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-8.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen-9\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen-9.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/kitchen\.jpg\'\)\] {
-  background-image: url('/src/assets/images/kitchen.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/map\.png\'\)\] {
-  background-image: url('/src/assets/images/map.png');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/news-1\.jpg\'\)\] {
-  background-image: url('/src/assets/images/news-1.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/planritning\.jpg\'\)\] {
-  background-image: url('/src/assets/images/planritning.jpg');
-}
-
-.bg-\[url\(\'\/src\/assets\/images\/solar-panels\.jpg\'\)\] {
-  background-image: url('/src/assets/images/solar-panels.jpg');
-}
-
 .bg-\[url\(\'assets\/images\/10\.jpg\'\)\] {
   background-image: url('assets/images/10.jpg');
 }
 
-.bg-\[url\(\'hjarterum\/src\/assets\/images\/2\.jpg\'\)\] {
-  background-image: url('hjarterum/src/assets/images/2.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/2\.jpg\'\)\] {
-  background-image: url('assets/images/2.jpg');
+.bg-\[url\(\'assets\/images\/11\.jpeg\'\)\] {
+  background-image: url('assets/images/11.jpeg');
 }
 
 .bg-\[url\(\'assets\/images\/12\.jpeg\'\)\] {
   background-image: url('assets/images/12.jpeg');
+}
+
+.bg-\[url\(\'assets\/images\/13\.jpeg\'\)\] {
+  background-image: url('assets/images/13.jpeg');
+}
+
+.bg-\[url\(\'assets\/images\/2\.jpg\'\)\] {
+  background-image: url('assets/images/2.jpg');
 }
 
 .bg-\[url\(\'assets\/images\/5\.jpg\'\)\] {
@@ -1195,42 +1031,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-\[url\(\'assets\/images\/7\.jpg\'\)\] {
   background-image: url('assets/images/7.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/electric-car\.jpg\'\)\] {
-  background-image: url('assets/images/electric-car.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/key\.jpg\'\)\] {
-  background-image: url('assets/images/key.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/news-1\.jpg\'\)\] {
-  background-image: url('assets/images/news-1.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/solar-panels\.jpg\'\)\] {
-  background-image: url('assets/images/solar-panels.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/bathroom\.jpg\'\)\] {
-  background-image: url('assets/images/bathroom.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/bedroom\.jpg\'\)\] {
-  background-image: url('assets/images/bedroom.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/kitchen\.jpg\'\)\] {
-  background-image: url('assets/images/kitchen.jpg');
-}
-
-.bg-\[url\(\'assets\/images\/11\.jpeg\'\)\] {
-  background-image: url('assets/images/11.jpeg');
-}
-
-.bg-\[url\(\'assets\/images\/13\.jpeg\'\)\] {
-  background-image: url('assets/images/13.jpeg');
 }
 
 .bg-\[url\(\'assets\/images\/9\.jpg\'\)\] {
@@ -1269,6 +1069,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('assets/images/bathroom-9.jpg');
 }
 
+.bg-\[url\(\'assets\/images\/bathroom\.jpg\'\)\] {
+  background-image: url('assets/images/bathroom.jpg');
+}
+
 .bg-\[url\(\'assets\/images\/bedroom-2\.jpg\'\)\] {
   background-image: url('assets/images/bedroom-2.jpg');
 }
@@ -1299,6 +1103,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-\[url\(\'assets\/images\/bedroom-9\.jpg\'\)\] {
   background-image: url('assets/images/bedroom-9.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/bedroom\.jpg\'\)\] {
+  background-image: url('assets/images/bedroom.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/electric-car\.jpg\'\)\] {
+  background-image: url('assets/images/electric-car.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/key\.jpg\'\)\] {
+  background-image: url('assets/images/key.jpg');
 }
 
 .bg-\[url\(\'assets\/images\/kitchen-2\.jpg\'\)\] {
@@ -1333,12 +1149,24 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('assets/images/kitchen-9.jpg');
 }
 
-.bg-\[url\(\'assets\/images\/planritning\.jpg\'\)\] {
-  background-image: url('assets/images/planritning.jpg');
+.bg-\[url\(\'assets\/images\/kitchen\.jpg\'\)\] {
+  background-image: url('assets/images/kitchen.jpg');
 }
 
 .bg-\[url\(\'assets\/images\/map\.png\'\)\] {
   background-image: url('assets/images/map.png');
+}
+
+.bg-\[url\(\'assets\/images\/news-1\.jpg\'\)\] {
+  background-image: url('assets/images/news-1.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/planritning\.jpg\'\)\] {
+  background-image: url('assets/images/planritning.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/solar-panels\.jpg\'\)\] {
+  background-image: url('assets/images/solar-panels.jpg');
 }
 
 .bg-cover {
